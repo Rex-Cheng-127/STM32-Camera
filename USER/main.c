@@ -27,9 +27,10 @@
 #include "L1_Delay.h"
 #include "L1_Timer.h"
 #include "L1_Flash.h"
-#include "L1_I2C.h"
 #include "L1_EEPROM.h"
-#include "L1_OLED_Display.h"
+#include "L1_CMOS.h"
+#include "L1_TFTLCD.h"
+#include "L1_SD.h"
 #include "L2_PushBottom.h"
 
 /****************************************************************************************************************
@@ -46,7 +47,6 @@
 #define BottomAction_STK_SIZE 50  // 任务堆栈大小
 #define USART_STK_SIZE 50         // 任务堆栈大小
 #define FLASH_STK_SIZE 100        // 任务堆栈大小
-#define OLED_DISPLAY_STK_SIZE 256 // 任务堆栈大小
 
 #define START_TASK_PRIO 1         // 任务优先级
 #define BottomMonitor_TASK_PRIO 2 // 任务优先级
@@ -54,7 +54,6 @@
 #define USART_TASK_PRIO 4         // 任务优先级
 #define FLASH_TASK_PRIO 5         // 任务优先级
 #define LifeLED2_TASK_PRIO 6      // 任务优先级
-#define OLED_DISPLAY_TASK_PRIO 7  // 任务优先级
 
 /****************************************************************************************************************
  * Private macro
@@ -69,7 +68,6 @@ TaskHandle_t BottomMonitor_TaskHandler; // 任务句柄
 TaskHandle_t BottomAction_TaskHandler;  // 任务句柄
 TaskHandle_t USART_TaskHandler;         // 任务句柄
 TaskHandle_t FLASH_TaskHandler;         // 任务句柄
-TaskHandle_t OLED_Display_TaskHandler;  // 任务句柄
 
 /****************************************************************************************************************
  * Private function prototypes
@@ -110,11 +108,10 @@ void Init_all(void)
   LED2_Init();
   Bottom_Init();
   Delay_Init();
-  //USART_all_Init();
+  USART_all_Init();
   TIM_All_Init();
   SPI_Flash_Init();
   AT24CXX_Init();
-  // OLED_Display_Init(); // Disable OLED Display Task because HW issue
 }
 
 // Function of start task
@@ -161,16 +158,7 @@ void task_Start(void *pvParameters)
               (void *)NULL,
               (UBaseType_t)FLASH_TASK_PRIO,
               (TaskHandle_t *)&FLASH_TaskHandler);
-// Disable OLED Display Task because HW issue
-#if 0
-  // Create Task of OLED Display Test
-  xTaskCreate((TaskFunction_t)task_OLED_Display,
-              (const char *)"task_OLED_Display",
-              (uint16_t)OLED_DISPLAY_STK_SIZE,
-              (void *)NULL,
-              (UBaseType_t)OLED_DISPLAY_TASK_PRIO,
-              (TaskHandle_t *)&OLED_Display_TaskHandler);
-#endif
+
   vTaskDelete(Start_TaskHandler); // 删除开始任务
 
   taskEXIT_CRITICAL(); // 退出临界区

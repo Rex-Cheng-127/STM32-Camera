@@ -377,7 +377,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD, USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\FWLIB\src;..\FWLIB\inc;..\USER;.\L1_Hardware;.\L1_Hardware\L1_LED;.\L1_Hardware\L1_Bottom;.\L1_Hardware\L1_USART;.\L1_Hardware\L1_Delay;.\L1_Hardware\L1_Flash;.\L1_Hardware\L1_CAN;.\L1_Hardware\L1_I2C;.\L1_Hardware\L1_Timer;.\L1_Hardware\L1_USB;.\L1_Hardware\L1_PWM;.\L1_Hardware\L1_EEPROM;.\L1_Hardware\L1_OLED_Display;.\L2_Action;.\L2_Action\L2_PushBottom;..\FreeRTOS;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM3</IncludePath>
+              <IncludePath>..\CORE;..\FWLIB\src;..\FWLIB\inc;..\USER;.\L1_Hardware;.\L1_Hardware\L1_LED;.\L1_Hardware\L1_Bottom;.\L1_Hardware\L1_USART;.\L1_Hardware\L1_Delay;.\L1_Hardware\L1_Flash;.\L1_Hardware\L1_Timer;.\L1_Hardware\L1_EEPROM;.\L1_Hardware\L1_CMOS;.\L1_Hardware\L1_SD;.\L1_Hardware\L1_TFTLCD;.\L2_Action;.\L2_Action\L2_PushBottom;..\FreeRTOS;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM3</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -602,29 +602,9 @@
               <FilePath>.\L1_Hardware\L1_Flash\L1_Flash.c</FilePath>
             </File>
             <File>
-              <FileName>L1_I2C.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\L1_Hardware\L1_I2C\L1_I2C.c</FilePath>
-            </File>
-            <File>
               <FileName>L1_Timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\L1_Hardware\L1_Timer\L1_Timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>L1_CAN.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\L1_Hardware\L1_CAN\L1_CAN.c</FilePath>
-            </File>
-            <File>
-              <FileName>L1_USB.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\L1_Hardware\L1_USB\L1_USB.c</FilePath>
-            </File>
-            <File>
-              <FileName>L1_PWM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\L1_Hardware\L1_PWM\L1_PWM.c</FilePath>
             </File>
             <File>
               <FileName>L1_EEPROM.c</FileName>
@@ -632,9 +612,19 @@
               <FilePath>.\L1_Hardware\L1_EEPROM\L1_EEPROM.c</FilePath>
             </File>
             <File>
-              <FileName>L1_OLED_Display.c</FileName>
+              <FileName>L1_CMOS.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\L1_Hardware\L1_OLED_Display\L1_OLED_Display.c</FilePath>
+              <FilePath>.\L1_Hardware\L1_CMOS\L1_CMOS.c</FilePath>
+            </File>
+            <File>
+              <FileName>L1_TFTLCD.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\L1_Hardware\L1_TFTLCD\L1_TFTLCD.c</FilePath>
+            </File>
+            <File>
+              <FileName>L1_SD.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\L1_Hardware\L1_SD\L1_SD.c</FilePath>
             </File>
           </Files>
         </Group>
