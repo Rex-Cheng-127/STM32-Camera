@@ -22,40 +22,39 @@ Dialog DLL:      TCM.DLL V1.36.2.0
  
 <h2>Project:</h2>
 E:\Data\Projects\STM32-Camera\USER\STM32_FreeRTOS.uvproj
-Project File Date:  11/24/2026
+Project File Date:  11/26/2026
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'Target 1'
 assembling startup_stm32f10x_hd.s...
-compiling stm32f10x_bkp.c...
 compiling core_cm3.c...
-compiling stm32f10x_dac.c...
-compiling stm32f10x_adc.c...
-compiling stm32f10x_gpio.c...
-compiling misc.c...
-compiling stm32f10x_crc.c...
-compiling stm32f10x_dma.c...
-compiling stm32f10x_dbgmcu.c...
 compiling stm32f10x_exti.c...
-compiling stm32f10x_cec.c...
-compiling stm32f10x_fsmc.c...
-compiling stm32f10x_flash.c...
+compiling misc.c...
 compiling stm32f10x_can.c...
-compiling stm32f10x_iwdg.c...
+compiling stm32f10x_cec.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_crc.c...
+compiling stm32f10x_dbgmcu.c...
+compiling stm32f10x_dma.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_bkp.c...
 compiling stm32f10x_i2c.c...
+compiling stm32f10x_dac.c...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_iwdg.c...
 compiling stm32f10x_pwr.c...
-compiling stm32f10x_rtc.c...
 compiling stm32f10x_rcc.c...
+compiling stm32f10x_rtc.c...
 compiling stm32f10x_sdio.c...
+compiling stm32f10x_wwdg.c...
 compiling stm32f10x_spi.c...
 compiling stm32f10x_usart.c...
-compiling stm32f10x_wwdg.c...
-compiling system_stm32f10x.c...
 compiling L1_Bottom.c...
 ..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
-.\L1_Hardware\L1_Delay\L1_Delay.h(96): warning:  #1-D: last line of file ends without a newline
+.\L1_Hardware\L1_Delay\L1_Delay.h(106): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
 L1_Hardware\L1_Bottom\L1_Bottom.c(139): warning:  #223-D: function "printf" declared implicitly
       printf("Executing Task: task_BottomMonitor\n");
@@ -64,16 +63,18 @@ L1_Hardware\L1_Bottom\L1_Bottom.c(142): warning:  #223-D: function "vTaskDelay" 
 L1_Hardware\L1_Bottom\L1_Bottom.c(170): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
 L1_Hardware\L1_Bottom\L1_Bottom.c: 5 warnings, 0 errors
+compiling stm32f10x_tim.c...
 compiling stm32f10x_it.c...
 ..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
 stm32f10x_it.c(145): warning:  #223-D: function "xPortSysTickHandler" declared implicitly
       xPortSysTickHandler();
 stm32f10x_it.c: 2 warnings, 0 errors
+compiling system_stm32f10x.c...
 compiling main.c...
 ..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
-.\L1_Hardware\L1_Delay\L1_Delay.h(96): warning:  #1-D: last line of file ends without a newline
+.\L1_Hardware\L1_Delay\L1_Delay.h(106): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
 .\L1_Hardware\L1_USART\L1_USART.h(49): warning:  #9-D: nested comment is not allowed
   /****************************************************************************************************************
@@ -83,17 +84,19 @@ compiling main.c...
           ****************************************************************************************************************/
 .\L1_Hardware\L1_EEPROM\L1_EEPROM.h(73): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
-.\L1_Hardware\L1_CMOS\L1_CMOS.h(45): warning:  #1-D: last line of file ends without a newline
+.\L1_Hardware\L1_CMOS\L1_CMOS.h(48): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
-.\L1_Hardware\L1_TFTLCD\L1_TFTLCD.h(45): warning:  #1-D: last line of file ends without a newline
+.\L1_Hardware\L1_TFTLCD\L1_TFTLCD.h(52): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
-.\L1_Hardware\L1_SD\L1_SD.h(45): warning:  #1-D: last line of file ends without a newline
+.\L1_Hardware\L1_SD\L1_SD.h(49): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
 .\L2_Action\L2_PushBottom\L2_PushBottom.h(52): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
-main.c(112): warning:  #223-D: function "TIM_All_Init" declared implicitly
-    TIM_All_Init();
-main.c: 11 warnings, 0 errors
+main.c(146): warning:  #185-D: dynamic initialization in unreachable code
+    uint8_t camErr = OV7670_Init();
+main.c(271): warning:  #40-D: expected an identifier
+  #ifdef 0
+main.c: 12 warnings, 0 errors
 compiling L1_LED.c...
 ..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
@@ -104,33 +107,18 @@ L1_Hardware\L1_LED\L1_LED.c(87): warning:  #223-D: function "vTaskDelay" declare
 L1_Hardware\L1_LED\L1_LED.c(97): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
 L1_Hardware\L1_LED\L1_LED.c: 4 warnings, 0 errors
-compiling stm32f10x_tim.c...
-compiling L1_USART.c...
-..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
-   ****************************************************************************************************************/
-.\L1_Hardware\L1_Delay\L1_Delay.h(96): warning:  #1-D: last line of file ends without a newline
-          ****************************************************************************************************************/
-L1_Hardware\L1_USART\L1_USART.h(49): warning:  #9-D: nested comment is not allowed
-  /****************************************************************************************************************
-L1_Hardware\L1_USART\L1_USART.c(59): warning:  #260-D: explicit type is missing ("int" assumed)
-  _sys_exit(int x)
-L1_Hardware\L1_USART\L1_USART.c(232): warning:  #223-D: function "vTaskDelay" declared implicitly
-          vTaskDelay(1000);
-L1_Hardware\L1_USART\L1_USART.c(239): warning:  #1-D: last line of file ends without a newline
-   ****************************************************************************************************************/
-L1_Hardware\L1_USART\L1_USART.c: 6 warnings, 0 errors
 compiling L1_Delay.c...
 ..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
-L1_Hardware\L1_Delay\L1_Delay.h(96): warning:  #1-D: last line of file ends without a newline
+L1_Hardware\L1_Delay\L1_Delay.h(106): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
-L1_Hardware\L1_Delay\L1_Delay.c(94): warning:  #1-D: last line of file ends without a newline
+L1_Hardware\L1_Delay\L1_Delay.c(188): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
 L1_Hardware\L1_Delay\L1_Delay.c: 3 warnings, 0 errors
 compiling L1_Flash.c...
 ..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
-.\L1_Hardware\L1_Delay\L1_Delay.h(96): warning:  #1-D: last line of file ends without a newline
+.\L1_Hardware\L1_Delay\L1_Delay.h(106): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
 L1_Hardware\L1_Flash\L1_Flash.h(67): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
@@ -149,21 +137,6 @@ L1_Hardware\L1_Flash\L1_Flash.c(484): warning:  #223-D: function "vTaskDelay" de
 L1_Hardware\L1_Flash\L1_Flash.c(490): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
 L1_Hardware\L1_Flash\L1_Flash.c: 10 warnings, 0 errors
-compiling croutine.c...
-compiling list.c...
-compiling event_groups.c...
-compiling L1_EEPROM.c...
-..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
-   ****************************************************************************************************************/
-.\L1_Hardware\L1_Delay\L1_Delay.h(96): warning:  #1-D: last line of file ends without a newline
-          ****************************************************************************************************************/
-L1_Hardware\L1_EEPROM\L1_EEPROM.h(73): warning:  #1-D: last line of file ends without a newline
-   ****************************************************************************************************************/
-L1_Hardware\L1_EEPROM\L1_EEPROM.c(50): warning:  #223-D: function "printf" declared implicitly
-    printf("Write EEPROM......"); 
-L1_Hardware\L1_EEPROM\L1_EEPROM.c(300): warning:  #1-D: last line of file ends without a newline
-   ****************************************************************************************************************/
-L1_Hardware\L1_EEPROM\L1_EEPROM.c: 5 warnings, 0 errors
 compiling L1_Timer.c...
 ..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
@@ -172,55 +145,92 @@ L1_Hardware\L1_Timer\L1_Timer.h(51): warning:  #1-D: last line of file ends with
 L1_Hardware\L1_Timer\L1_Timer.c(100): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
 L1_Hardware\L1_Timer\L1_Timer.c: 3 warnings, 0 errors
+compiling L1_USART.c...
+..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
+   ****************************************************************************************************************/
+.\L1_Hardware\L1_Delay\L1_Delay.h(106): warning:  #1-D: last line of file ends without a newline
+          ****************************************************************************************************************/
+L1_Hardware\L1_USART\L1_USART.h(49): warning:  #9-D: nested comment is not allowed
+  /****************************************************************************************************************
+L1_Hardware\L1_USART\L1_USART.c(59): warning:  #260-D: explicit type is missing ("int" assumed)
+  _sys_exit(int x)
+L1_Hardware\L1_USART\L1_USART.c(232): warning:  #223-D: function "vTaskDelay" declared implicitly
+          vTaskDelay(1000);
+L1_Hardware\L1_USART\L1_USART.c(239): warning:  #1-D: last line of file ends without a newline
+   ****************************************************************************************************************/
+L1_Hardware\L1_USART\L1_USART.c: 6 warnings, 0 errors
+compiling L1_EEPROM.c...
+..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
+   ****************************************************************************************************************/
+.\L1_Hardware\L1_Delay\L1_Delay.h(106): warning:  #1-D: last line of file ends without a newline
+          ****************************************************************************************************************/
+L1_Hardware\L1_EEPROM\L1_EEPROM.h(73): warning:  #1-D: last line of file ends without a newline
+   ****************************************************************************************************************/
+L1_Hardware\L1_EEPROM\L1_EEPROM.c(50): warning:  #223-D: function "printf" declared implicitly
+    printf("Write EEPROM......"); 
+L1_Hardware\L1_EEPROM\L1_EEPROM.c(300): warning:  #1-D: last line of file ends without a newline
+   ****************************************************************************************************************/
+L1_Hardware\L1_EEPROM\L1_EEPROM.c: 5 warnings, 0 errors
+compiling croutine.c...
+compiling list.c...
+compiling event_groups.c...
 compiling L1_CMOS.c...
 ..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
-L1_Hardware\L1_CMOS\L1_CMOS.h(45): warning:  #1-D: last line of file ends without a newline
+.\L1_Hardware\L1_Delay\L1_Delay.h(106): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
-L1_Hardware\L1_CMOS\L1_CMOS.c(42): warning:  #1-D: last line of file ends without a newline
+L1_Hardware\L1_CMOS\L1_CMOS.h(48): warning:  #1-D: last line of file ends without a newline
+          ****************************************************************************************************************/
+L1_Hardware\L1_CMOS\L1_CMOS.c(275): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
-L1_Hardware\L1_CMOS\L1_CMOS.c: 3 warnings, 0 errors
+L1_Hardware\L1_CMOS\L1_CMOS.c: 4 warnings, 0 errors
 compiling L1_TFTLCD.c...
 ..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
-L1_Hardware\L1_TFTLCD\L1_TFTLCD.h(45): warning:  #1-D: last line of file ends without a newline
+.\L1_Hardware\L1_Delay\L1_Delay.h(106): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
-L1_Hardware\L1_TFTLCD\L1_TFTLCD.c(41): warning:  #1-D: last line of file ends without a newline
-   ****************************************************************************************************************/
-L1_Hardware\L1_TFTLCD\L1_TFTLCD.c: 3 warnings, 0 errors
-compiling L1_SD.c...
-..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
-   ****************************************************************************************************************/
-L1_Hardware\L1_SD\L1_SD.h(45): warning:  #1-D: last line of file ends without a newline
+L1_Hardware\L1_TFTLCD\L1_TFTLCD.h(52): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
-L1_Hardware\L1_SD\L1_SD.c(41): warning:  #1-D: last line of file ends without a newline
+L1_Hardware\L1_TFTLCD\L1_TFTLCD.c(218): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
-L1_Hardware\L1_SD\L1_SD.c: 3 warnings, 0 errors
-compiling queue.c...
+L1_Hardware\L1_TFTLCD\L1_TFTLCD.c: 4 warnings, 0 errors
 compiling L2_PushBottom.c...
 ..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
-.\L1_Hardware\L1_Delay\L1_Delay.h(96): warning:  #1-D: last line of file ends without a newline
+.\L1_Hardware\L1_Delay\L1_Delay.h(106): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
 L2_Action\L2_PushBottom\L2_PushBottom.h(52): warning:  #1-D: last line of file ends without a newline
           ****************************************************************************************************************/
-L2_Action\L2_PushBottom\L2_PushBottom.c(48): warning:  #223-D: function "printf" declared implicitly
-      printf("Executing Task: task_BottomAction\n");
-L2_Action\L2_PushBottom\L2_PushBottom.c(51): warning:  #223-D: function "vTaskDelay" declared implicitly
-      vTaskDelay(50);
-L2_Action\L2_PushBottom\L2_PushBottom.c(103): warning:  #1-D: last line of file ends without a newline
+L2_Action\L2_PushBottom\L2_PushBottom.c(105): warning:  #1-D: last line of file ends without a newline
    ****************************************************************************************************************/
-L2_Action\L2_PushBottom\L2_PushBottom.c: 6 warnings, 0 errors
+L2_Action\L2_PushBottom\L2_PushBottom.c: 4 warnings, 0 errors
+compiling L1_SD.c...
+..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
+   ****************************************************************************************************************/
+L1_Hardware\L1_SD\L1_SD.h(49): warning:  #1-D: last line of file ends without a newline
+          ****************************************************************************************************************/
+L1_Hardware\L1_SD\L1_SD.c(209): warning:  #1-D: last line of file ends without a newline
+   ****************************************************************************************************************/
+L1_Hardware\L1_SD\L1_SD.c: 3 warnings, 0 errors
+compiling queue.c...
+compiling L2_CameraStream.c...
+..\USER\types.h(61): warning:  #1-D: last line of file ends without a newline
+   ****************************************************************************************************************/
+L2_Action\L2_CameraStream\L2_CameraStream.h(49): warning:  #1-D: last line of file ends without a newline
+          ****************************************************************************************************************/
+L2_Action\L2_CameraStream\L2_CameraStream.c(119): warning:  #1-D: last line of file ends without a newline
+   ****************************************************************************************************************/
+L2_Action\L2_CameraStream\L2_CameraStream.c: 3 warnings, 0 errors
 compiling stream_buffer.c...
 compiling timers.c...
-compiling heap_4.c...
 compiling tasks.c...
+compiling heap_4.c...
 compiling port.c...
 linking...
-Program Size: Code=14356 RO-data=892 RW-data=180 ZI-data=19444  
+Program Size: Code=5172 RO-data=336 RW-data=152 ZI-data=2056  
 FromELF: creating hex file...
-"..\OBJ\STM32_FreeRTOS.axf" - 0 Error(s), 64 Warning(s).
-Build Time Elapsed:  00:00:02
+"..\OBJ\STM32_FreeRTOS.axf" - 0 Error(s), 68 Warning(s).
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

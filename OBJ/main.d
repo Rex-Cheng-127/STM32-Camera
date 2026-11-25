@@ -11,6 +11,8 @@
 ..\obj\main.o: ..\FreeRTOS\include\mpu_wrappers.h
 ..\obj\main.o: ..\FreeRTOS\include\task.h
 ..\obj\main.o: ..\FreeRTOS\include\list.h
+..\obj\main.o: ..\FreeRTOS\include\semphr.h
+..\obj\main.o: ..\FreeRTOS\include\queue.h
 ..\obj\main.o: stm32f10x_it.h
 ..\obj\main.o: stm32f10x.h
 ..\obj\main.o: ..\CORE\core_cm3.h

@@ -38,6 +38,7 @@
 "..\obj\l1_tftlcd.o"
 "..\obj\l1_sd.o"
 "..\obj\l2_pushbottom.o"
+"..\obj\l2_camerastream.o"
 "..\obj\croutine.o"
 "..\obj\event_groups.o"
 "..\obj\list.o"

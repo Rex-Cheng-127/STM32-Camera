@@ -30,3 +30,4 @@
 ..\obj\l1_tftlcd.o: ..\FWLIB\inc\stm32f10x_usart.h
 ..\obj\l1_tftlcd.o: ..\FWLIB\inc\stm32f10x_wwdg.h
 ..\obj\l1_tftlcd.o: ..\FWLIB\inc\misc.h
+..\obj\l1_tftlcd.o: .\L1_Hardware\L1_Delay\L1_Delay.h
