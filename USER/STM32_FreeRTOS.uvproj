@@ -377,7 +377,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD, USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\FWLIB\src;..\FWLIB\inc;..\USER;.\L1_Hardware;.\L1_Hardware\L1_LED;.\L1_Hardware\L1_Bottom;.\L1_Hardware\L1_USART;.\L1_Hardware\L1_Delay;.\L1_Hardware\L1_Flash;.\L1_Hardware\L1_Timer;.\L1_Hardware\L1_EEPROM;.\L1_Hardware\L1_CMOS;.\L1_Hardware\L1_SD;.\L1_Hardware\L1_TFTLCD;.\L2_Action;.\L2_Action\L2_PushBottom;..\FreeRTOS;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM3</IncludePath>
+              <IncludePath>..\CORE;..\FWLIB\src;..\FWLIB\inc;..\USER;.\L1_Hardware;.\L1_Hardware\L1_LED;.\L1_Hardware\L1_Bottom;.\L1_Hardware\L1_USART;.\L1_Hardware\L1_Delay;.\L1_Hardware\L1_Flash;.\L1_Hardware\L1_Timer;.\L1_Hardware\L1_EEPROM;.\L1_Hardware\L1_CMOS;.\L1_Hardware\L1_SD;.\L1_Hardware\L1_TFTLCD;.\L2_Action;.\L2_Action\L2_PushBottom;.\L2_Action\L2_CameraStream;..\FreeRTOS;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM3</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -635,6 +635,11 @@
               <FileName>L2_PushBottom.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\L2_Action\L2_PushBottom\L2_PushBottom.c</FilePath>
+            </File>
+            <File>
+              <FileName>L2_CameraStream.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\L2_Action\L2_CameraStream\L2_CameraStream.c</FilePath>
             </File>
           </Files>
         </Group>

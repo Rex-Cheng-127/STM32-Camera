@@ -85,10 +85,20 @@
 /****************************************************************************************************************
  * Exported functions
  ****************************************************************************************************************/
+
+ErrorStatus SystemClock_HSE_72MHz_Init(void);
+void MCO_XCLK_Init(void);
+void DWT_Delay_Init(void);
+void Delay_us(uint32_t us);
+void Delay_ms(uint32_t ms);
+
+#if 0
 void Delay_Init(void);
 void Delay_ms(uint16 uMS);
 void Delay_us(uint32 uUS);
+
 void xDelay_us(uint32 uMS);
+#endif
 
 #endif /* L1_DELAY_H */
        /****************************************************************************************************************

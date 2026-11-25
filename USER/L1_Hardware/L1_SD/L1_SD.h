@@ -39,6 +39,10 @@
  * Exported functions
  ****************************************************************************************************************/
 
+uint8_t SD_Init(void);
+uint8_t SPI2_ReadWriteByte(uint8_t txData);
+static uint8_t SD_SendCmd(uint8_t cmd, uint32_t arg, uint8_t crc);
+
 #endif /* L1_SD_H */
        /****************************************************************************************************************
         * End of file
