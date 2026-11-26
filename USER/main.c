@@ -140,8 +140,7 @@ int main(void)
   TFTLCD_Init();
   /* For LCD Test */
   LCD_FillColor(0xF800); // 整片刷成純紅色 (RGB565)
-  while (1)
-    ; // 停在這裡先不進 OV7670 與 FreeRTOS
+  // while (1);                      // 停在這裡先不進 OV7670 與 FreeRTOS
   /* Test End */
   uint8_t camErr = OV7670_Init();
   printf("[CAM] OV7670 Init %s (code=%d)\r\n", (camErr == 0) ? "OK" : "FAIL", camErr);
@@ -268,7 +267,7 @@ void vTaskSystemMonitor(void *pvParameters)
 }
 
 /* Old Codes */
-#ifdef 0
+#if 0
 
 void Init_all(void)
 {
